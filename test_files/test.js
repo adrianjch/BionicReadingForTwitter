@@ -1,8 +1,19 @@
 // Get text element
 const text = document.querySelector(".text"); 
+
 // Split the text into an array of words
 const words = text.textContent.split(" "); 
-// Wrap the first word in a html bold tag
-words[0] = "<b>" + words[0] + "</b>"; 
-// Join the words back together with a space and update the paragraph content
-text.innerHTML = words.join(" "); 
+
+/* --- Get first letters --- */
+
+const boldedWords = words.map(word => {
+    let nChars = word.length;
+    let nBoldChars = Math.ceil(nChars/3);
+    let boldSubstring = word.substring(0, nBoldChars);
+    let normalSubstring = word.substring(nBoldChars);
+    let bionicWord = '<b>' + boldSubstring + '</b>' + normalSubstring;
+
+    return bionicWord;
+})
+
+text.innerHTML = boldedWords.join(" ");
