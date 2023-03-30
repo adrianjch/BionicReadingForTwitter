@@ -1,5 +1,6 @@
+/* 
 // Select the node that you want to observe for changes
-const targetNode = document.getElementById('myDiv');
+const targetNode = document.getElementById(#######to_change);
 
 // Create a new instance of the MutationObserver with a callback function
 const observer = new MutationObserver((mutationsList, observer) => {
@@ -23,6 +24,7 @@ var condition = false;
 if (condition === true) {
     observer.disconnect();
 }
+
 
 var nReloads = 0;
 
@@ -52,10 +54,11 @@ function main() {
 	});
 
 }
+*/
 
 /* ----------- Former main ------------*/
 
-/*
+
 setTimeout(test, 3000);
 
 var nReloads = 0;
@@ -91,4 +94,3 @@ function test()
 
 	setTimeout(test, 5000);
 }
-*/

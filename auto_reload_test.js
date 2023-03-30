@@ -1,30 +1,23 @@
 // Select the node that you want to observe for changes
-const targetNode = document.getElementById('myDiv');
+const targetNode = document.querySelector('.css-1dbjc4n');
 
-// Create a new instance of the MutationObserver with a callback function
-const observer = new MutationObserver((mutationsList, observer) => {
-    for(let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            // Execute main when a new child is added or remove from the parent div
-            main();
-        }
+// Create a new instance of the IntersectionObserver with a callback function
+const observer = new IntersectionObserver(entries => {
+  for (let entry of entries) {
+    if (entry.isIntersecting) {
+      // The target element is now visible - do something here
+      console.log('Twitter is loading new feeds from scrolling!');
+      main();
     }
+  }
 });
 
-// Define the options for the observer
-const config = { childList: true, subtree: true };
+// Start observing the target node
+observer.observe(targetNode);
 
-// Start observing the target node for specified configuration changes
-observer.observe(targetNode, config);
-
-
-// Disconnect observer (condition not yet set)
-var condition = false;
-if (condition === true) {
-    observer.disconnect();
-}
-
+var nReloads = 0;
 
 function main() {
-    
-}
+    nReloads++;
+    document.title = "Rld n." + nReloads;
+};
