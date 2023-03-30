@@ -1,0 +1,25 @@
+{
+	"name": "Bionic Reading for Twitter",
+	"description": "A simple extension for Chrome",
+	"version": "0.1",
+	"author": "Adrian & Aleix",
+	"manifest_version": 3,
+
+	"action": {
+		"default_popup": "test_files/test.html",
+		"default_icon": "logo.png"
+	},
+	
+	"permissions": [
+		"activeTab"
+	],
+	
+	"content_scripts": [
+	{
+		"matches": ["*://*/*"],
+		"all_frames": true,
+		"js": ["test.js"],
+		"run_at": "document_end"
+	}
+	]
+}
