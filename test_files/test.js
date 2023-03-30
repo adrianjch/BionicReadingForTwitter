@@ -1,11 +1,8 @@
-// Get HTML contents
-const text2 = document.getElementById('text2');
-// Create array of words from the fetched text
-const words = text2.textContent.split(" ");
-//Iterate through each word
-words.forEach((word) => {
-    console.log(word)
-})
-
-
-text2.style.fontWeight = 'bold';
+// Get text element
+const text = document.querySelector(".text"); 
+// Split the text into an array of words
+const words = text.textContent.split(" "); 
+// Wrap the first word in a html bold tag
+words[0] = "<b>" + words[0] + "</b>"; 
+// Join the words back together with a space and update the paragraph content
+text.innerHTML = words.join(" "); 
