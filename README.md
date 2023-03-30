@@ -8,6 +8,7 @@ Bionic reading bolds the first characters of each word, which helps focus and re
 
 ![image](https://user-images.githubusercontent.com/95043218/228982802-c02bb678-9482-48e4-aa54-571cfbcd20a0.png)
 
+# TO-DOs:
 
 - Ignore URLs
 - Ignore @
