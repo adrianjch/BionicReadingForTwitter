@@ -18,7 +18,7 @@
 	{
 		"matches": ["https://twitter.com/*"],
 		"all_frames": true,
-		"js": ["test.js"],
+		"js": ["main.js"],
 		"run_at": "document_idle"
 	}
 	]
