@@ -16,10 +16,10 @@
 	
 	"content_scripts": [
 	{
-		"matches": ["*://*/*"],
+		"matches": ["https://twitter.com/*"],
 		"all_frames": true,
 		"js": ["test.js"],
-		"run_at": "document_end"
+		"run_at": "document_idle"
 	}
 	]
 }
